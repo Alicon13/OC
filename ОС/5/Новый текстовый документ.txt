@@ -1,0 +1,163 @@
+dfedorenko@dfedorenko-pc:~/Рабочий стол$ rm LABRAB
+rm: невозможно удалить 'LABRAB': Это каталог
+dfedorenko@dfedorenko-pc:~/Рабочий стол$ rm -r LABRAB
+dfedorenko@dfedorenko-pc:~/Рабочий стол$ cd ~
+dfedorenko@dfedorenko-pc:~$ mkdir LABRAB
+dfedorenko@dfedorenko-pc:~$ cd LABRAB
+dfedorenko@dfedorenko-pc:~/LABRAB$ mkdir A2
+dfedorenko@dfedorenko-pc:~/LABRAB$ mkdir A1
+dfedorenko@dfedorenko-pc:~/LABRAB$ cd A1
+dfedorenko@dfedorenko-pc:~/LABRAB/A1$ mkdir B1
+dfedorenko@dfedorenko-pc:~/LABRAB/A1$ mkdir B2
+dfedorenko@dfedorenko-pc:~/LABRAB/A1$ mkdir C2
+dfedorenko@dfedorenko-pc:~/LABRAB/A1$ cd B1
+dfedorenko@dfedorenko-pc:~/LABRAB/A1/B1$ mkdir C1
+dfedorenko@dfedorenko-pc:~/LABRAB/A1/B1$ cd C1
+dfedorenko@dfedorenko-pc:~/LABRAB/A1/B1/C1$  touch text1.txt
+dfedorenko@dfedorenko-pc:~/LABRAB/A1/B1/C1$ touch text2.txt
+dfedorenko@dfedorenko-pc:~/LABRAB/A1/B1/C1$ cd 
+dfedorenko@dfedorenko-pc:~$ cd LABRAB/A1/C2
+dfedorenko@dfedorenko-pc:~/LABRAB/A1/C2$ touch docs.doc
+dfedorenko@dfedorenko-pc:~/LABRAB/A1/C2$ cat ~/LABRAB/A1/B1/C1/text1.txt ~/LABRAB/A1/B1/C1/text2.txt ~/LABRAB/A1/C2/docs.doc > ~/LABRAB/my.dat
+dfedorenko@dfedorenko-pc:~/LABRAB/A1/C2$ cat ~/LABRAB/my.dat
+dfedorenko@dfedorenko-pc:~/LABRAB/A1/C2$ cat > ~/LABRAB/my.dat
+1234567890
+^Z
+[1]+  Остановлен    cat > ~/LABRAB/my.dat
+dfedorenko@dfedorenko-pc:~/LABRAB/A1/C2$ cd ~/LABRAB/A1/B1/C1
+dfedorenko@dfedorenko-pc:~/LABRAB/A1/B1/C1$ rename 's\*.txt/\*.cpp/'*.txt
+bash: rename: команда не найдена
+dfedorenko@dfedorenko-pc:~/LABRAB/A1/B1/C1$ sudo apt update
+[sudo] пароль для dfedorenko: 
+Сущ:1 http://dl.google.com/linux/chrome/deb stable InRelease
+Сущ:2 http://download.opensuse.org/repositories/home:/stevenpusser/Debian_10  InRelease
+Сущ:3 http://linux.teamviewer.com/deb stable InRelease                         
+Игн:4 http://www.tataranovich.com/debian buster InRelease                      
+Сущ:5 http://deb.debian.org/debian buster InRelease                            
+Пол:6 http://security.debian.org/debian-security buster/updates InRelease [65,4 kB]
+Пол:7 http://www.deb-multimedia.org buster InRelease [19,6 kB]                 
+Пол:8 http://www.tataranovich.com/debian buster Release [31,7 kB]              
+Пол:9 http://deb.debian.org/debian buster-updates InRelease [51,9 kB]          
+Пол:10 http://www.tataranovich.com/debian buster Release.gpg [488 B]           
+Игн:11 https://ookla.bintray.com/debian buster InRelease                       
+Пол:12 https://ookla.bintray.com/debian buster Release [4 387 B]
+Пол:13 http://deb.debian.org/debian buster/main Translation-ru [516 kB]    
+Игн:10 http://www.tataranovich.com/debian buster Release.gpg
+Can't open file /var/lib/apt/lists/_run_live_medium_dists_buster_main_binary-amd64_Packages: No such file or directory
+Чтение списков пакетов… Готово
+N: Пропускается получение настроенного файла «main/binary-i386/Packages», так как репозиторий «http://dl.google.com/linux/chrome/deb stable InRelease» не поддерживает архитектуру «i386»
+E: Файл Release для http://security.debian.org/debian-security/dists/buster/updates/InRelease пока не действителен (недостоверный ещё 3д 3ч 37мин 31с). Обновление этого репозитория производиться не будет.
+E: Файл Release для http://www.deb-multimedia.org/dists/buster/InRelease пока не действителен (недостоверный ещё 2д 22ч 16мин 27с). Обновление этого репозитория производиться не будет.
+E: Файл Release для http://deb.debian.org/debian/dists/buster-updates/InRelease пока не действителен (недостоверный ещё 2д 21ч 41мин 35с). Обновление этого репозитория производиться не будет.
+W: Ошибка GPG: http://www.tataranovich.com/debian buster Release: Следующие подписи неверны: EXPKEYSIG 836CC41976FB442E Tataranovich.com APT Repository <pkg-master@tataranovich.com>
+E: Репозиторий «http://www.tataranovich.com/debian buster Release» не подписан.
+N: Обновление из этого репозитория нельзя выполнить безопасным способом, поэтому по умолчанию он отключён.
+N: Информацию о создании репозитория и настройках пользователя смотрите в справочной странице apt-secure(8).
+E: Problem executing scripts APT::Update::Post-Invoke-Success 'test -x /usr/bin/apt-show-versions || exit 0 ; apt-show-versions -i'
+E: Sub-process returned an error code
+dfedorenko@dfedorenko-pc:~/LABRAB/A1/B1/C1$ sudo apt install rename
+Чтение списков пакетов… Готово
+Построение дерева зависимостей       
+Чтение информации о состоянии… Готово
+Следующие НОВЫЕ пакеты будут установлены:
+  rename
+Обновлено 0 пакетов, установлено 1 новых пакетов, для удаления отмечено 0 пакетов, и 195 пакетов не обновлено.
+Необходимо скачать 17,2 kB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 50,2 kB.
+Пол:1 http://deb.debian.org/debian buster/main amd64 rename all 1.10-1 [17,2 kB]
+Получено 17,2 kB за 0с (43,4 kB/s)  
+Выбор ранее не выбранного пакета rename.
+(Чтение базы данных … на данный момент установлен 150101 файл и каталог.)
+Подготовка к распаковке …/archives/rename_1.10-1_all.deb …
+Распаковывается rename (1.10-1) …
+Настраивается пакет rename (1.10-1) …
+update-alternatives: используется /usr/bin/file-rename для предоставления /usr/bin/rename (rename) в автоматическом режиме
+Обрабатываются триггеры для man-db (2.8.5-2) …
+dfedorenko@dfedorenko-pc:~/LABRAB/A1/B1/C1$ rename 's\*.txt/\*.cpp/'*.txt
+Substitution replacement not terminated at (user-supplied code).
+dfedorenko@dfedorenko-pc:~/LABRAB/A1/B1/C1$ rename 's\.txt/\.cpp/'*.txt
+Substitution replacement not terminated at (user-supplied code).
+dfedorenko@dfedorenko-pc:~/LABRAB/A1/B1/C1$ ls
+text1.txt  text2.txt
+dfedorenko@dfedorenko-pc:~/LABRAB/A1/B1/C1$ rename 's\.txt/\.cpp/' *.txt
+Substitution replacement not terminated at (user-supplied code).
+dfedorenko@dfedorenko-pc:~/LABRAB/A1/B1/C1$ rename 's\.txt/\.cpp/'*.txt
+Substitution replacement not terminated at (user-supplied code).
+dfedorenko@dfedorenko-pc:~/LABRAB/A1/B1/C1$ sudo apt update
+Сущ:1 http://download.opensuse.org/repositories/home:/stevenpusser/Debian_10  InRelease
+Сущ:2 http://deb.debian.org/debian buster InRelease                            
+Сущ:3 http://dl.google.com/linux/chrome/deb stable InRelease                   
+Пол:4 http://security.debian.org/debian-security buster/updates InRelease [65,4 kB]
+Игн:5 http://www.tataranovich.com/debian buster InRelease                      
+Пол:6 http://deb.debian.org/debian buster-updates InRelease [51,9 kB]          
+Пол:7 http://www.tataranovich.com/debian buster Release [31,7 kB]              
+Пол:8 http://www.deb-multimedia.org buster InRelease [19,6 kB]                 
+Игн:9 https://ookla.bintray.com/debian buster InRelease                        
+Пол:10 https://ookla.bintray.com/debian buster Release [4 387 B]               
+Пол:11 http://www.tataranovich.com/debian buster Release.gpg [488 B]           
+Сущ:13 http://linux.teamviewer.com/deb stable InRelease                        
+Игн:11 http://www.tataranovich.com/debian buster Release.gpg
+Can't open file /var/lib/apt/lists/_run_live_medium_dists_buster_main_binary-amd64_Packages: No such file or directory
+Чтение списков пакетов… Готово
+N: Пропускается получение настроенного файла «main/binary-i386/Packages», так как репозиторий «http://dl.google.com/linux/chrome/deb stable InRelease» не поддерживает архитектуру «i386»
+E: Файл Release для http://security.debian.org/debian-security/dists/buster/updates/InRelease пока не действителен (недостоверный ещё 3д 3ч 33мин 19с). Обновление этого репозитория производиться не будет.
+E: Файл Release для http://deb.debian.org/debian/dists/buster-updates/InRelease пока не действителен (недостоверный ещё 2д 21ч 37мин 23с). Обновление этого репозитория производиться не будет.
+E: Файл Release для http://www.deb-multimedia.org/dists/buster/InRelease пока не действителен (недостоверный ещё 2д 22ч 12мин 14с). Обновление этого репозитория производиться не будет.
+W: Ошибка GPG: http://www.tataranovich.com/debian buster Release: Следующие подписи неверны: EXPKEYSIG 836CC41976FB442E Tataranovich.com APT Repository <pkg-master@tataranovich.com>
+E: Репозиторий «http://www.tataranovich.com/debian buster Release» не подписан.
+N: Обновление из этого репозитория нельзя выполнить безопасным способом, поэтому по умолчанию он отключён.
+N: Информацию о создании репозитория и настройках пользователя смотрите в справочной странице apt-secure(8).
+E: Problem executing scripts APT::Update::Post-Invoke-Success 'test -x /usr/bin/apt-show-versions || exit 0 ; apt-show-versions -i'
+E: Sub-process returned an error code
+dfedorenko@dfedorenko-pc:~/LABRAB/A1/B1/C1$ rename 's\.txt/\.cpp/'*.txt
+Substitution replacement not terminated at (user-supplied code).
+dfedorenko@dfedorenko-pc:~/LABRAB/A1/B1/C1$ sudo apt0get install rename
+sudo: apt0get: command not found
+dfedorenko@dfedorenko-pc:~/LABRAB/A1/B1/C1$ sudo aptget install rename
+sudo: aptget: command not found
+dfedorenko@dfedorenko-pc:~/LABRAB/A1/B1/C1$ sudo apt-get install rename
+Чтение списков пакетов… Готово
+Построение дерева зависимостей       
+Чтение информации о состоянии… Готово
+Уже установлен пакет rename самой новой версии (1.10-1).
+Обновлено 0 пакетов, установлено 0 новых пакетов, для удаления отмечено 0 пакетов, и 195 пакетов не обновлено.
+dfedorenko@dfedorenko-pc:~/LABRAB/A1/B1/C1$ sudo apt-get install mmv
+Чтение списков пакетов… Готово
+Построение дерева зависимостей       
+Чтение информации о состоянии… Готово
+Следующие НОВЫЕ пакеты будут установлены:
+  mmv
+Обновлено 0 пакетов, установлено 1 новых пакетов, для удаления отмечено 0 пакетов, и 195 пакетов не обновлено.
+Необходимо скачать 27,8 kB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 69,6 kB.
+Пол:1 http://deb.debian.org/debian buster/main amd64 mmv amd64 1.01b-19+b1 [27,8 kB]
+Получено 27,8 kB за 0с (94,5 kB/s)
+Выбор ранее не выбранного пакета mmv.
+(Чтение базы данных … на данный момент установлено 150117 файлов и каталогов.)
+Подготовка к распаковке …/mmv_1.01b-19+b1_amd64.deb …
+Распаковывается mmv (1.01b-19+b1) …
+Настраивается пакет mmv (1.01b-19+b1) …
+Обрабатываются триггеры для man-db (2.8.5-2) …
+dfedorenko@dfedorenko-pc:~/LABRAB/A1/B1/C1$ mmv \*.txt \#1.cpp
+dfedorenko@dfedorenko-pc:~/LABRAB/A1/B1/C1$ ls
+text1.cpp  text2.cpp
+dfedorenko@dfedorenko-pc:~/LABRAB/A1/B1/C1$ more my.dat
+more: выполение команды stat для my.dat завершилось неудачно: Нет такого файла или каталога
+dfedorenko@dfedorenko-pc:~/LABRAB/A1/B1/C1$ cd ~/LABRAB
+dfedorenko@dfedorenko-pc:~/LABRAB$ more my.dat
+1234567890
+dfedorenko@dfedorenko-pc:~/LABRAB$ tree
+.
+├── A1
+│   ├── B1
+│   │   └── C1
+│   │       ├── text1.cpp
+│   │       └── text2.cpp
+│   ├── B2
+│   └── C2
+│       └── docs.doc
+├── A2
+└── my.dat
+
+6 directories, 4 files
+
